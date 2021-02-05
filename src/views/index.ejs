@@ -1,0 +1,30 @@
+<%- include('includes/head'); %>
+
+<section class="container">
+  <h1>
+    <!-- Pode escrever java script também -->
+    <!-- <% if(typeof titulo !== 'undefined') { %>
+                <%- titulo %>
+            <% } %> -->
+
+    <!-- <% numeros.forEach(num => { %>
+                <%- num %>
+            <% }) %> -->
+
+    <!-- Um mostra o conteúdo sem executar html -->
+    <!-- <%= titulo %><br><br> -->
+
+    <!-- outro mostra o conteúdo executando html -->
+    <!-- <%- titulo %> -->
+    
+    <!-- <%- ummaVarialvelLocal %> -->
+  </h1>
+  <form action="/" method="post">
+    <input type="hidden" name="_csrf" value="<%- csrfToken %>">
+    <label>Cliente</label>
+    <input type="text" name="cliente" />
+    <button type="submit">Submit</button>
+  </form>
+</section>
+
+<%- include('includes/footer'); %>
