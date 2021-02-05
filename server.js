@@ -26,7 +26,6 @@ app.use(helmet());
 // helmet e csrf fazem parte da segurança do site, impedem invasões! 
 
 const csrf = require('csurf');
-app.use(csrf());
 
 // middlewares: são funções que são executadas nas rotas!
 // const meuMiddleware = require('./src/middlewares/middleware')
@@ -41,7 +40,6 @@ const {
 app.use(express.urlencoded({extended: true}))
 // pode-se também usar json, para isso é necessário 
 // adicionar essa linha de código:
-app.use(json());
 
 // arquivo estático, esse acessa a pasta public!
 app.use(express.static(path.resolve(__dirname, 'public')));
@@ -67,6 +65,7 @@ app.set('view engine', 'ejs');
 // ejs é similar ao PHP!
 
 
+app.use(csrf());
 // NOSSOS PRÓPRIOS MIDDLEWAREAS
 // app.use(meuMiddleware);
 app.use(csrfMiddleware);

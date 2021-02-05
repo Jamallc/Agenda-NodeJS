@@ -1,30 +1,35 @@
 <%- include('includes/head'); %>
+<%- include('includes/nav'); %>
 
-<section class="container">
-  <h1>
-    <!-- Pode escrever java script também -->
-    <!-- <% if(typeof titulo !== 'undefined') { %>
-                <%- titulo %>
-            <% } %> -->
 
-    <!-- <% numeros.forEach(num => { %>
-                <%- num %>
-            <% }) %> -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-2"></div>
+        <div class="col-lg-8 my-3">
+          <h1 class="text-center">Agenda</h1>
+          <p class="text-center lead">Seus contatos estão abaixo!</p>
 
-    <!-- Um mostra o conteúdo sem executar html -->
-    <!-- <%= titulo %><br><br> -->
+          <div class="row">
+            <div class="col my-3">
+              <div class="alert alert-danger">Um erro qualquer</div>
+            </div>
+          </div>
 
-    <!-- outro mostra o conteúdo executando html -->
-    <!-- <%- titulo %> -->
-    
-    <!-- <%- ummaVarialvelLocal %> -->
-  </h1>
-  <form action="/" method="post">
-    <input type="hidden" name="_csrf" value="<%- csrfToken %>">
-    <label>Cliente</label>
-    <input type="text" name="cliente" />
-    <button type="submit">Submit</button>
-  </form>
-</section>
+          <div class="responsive-table">
+            <table class="table my-3">
+              <tr>
+                <td>Weber</td>
+                <td>Rocha</td>
+                <td>61995251400</td>
+                <td>weber@email.com</td>
+              </tr>
+            </table>
+          </div>
+
+        </div>
+        <div class="col-lg-2"></div>
+    </div>
+  </div>
+
 
 <%- include('includes/footer'); %>
